@@ -1,0 +1,84 @@
+<svg viewBox="0 0 1400 780" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowF" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b6472"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="780" fill="#ffffff"/>
+
+  <text x="700" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1a2330">Cost Governance Loop — Incident to Permanent Guardrail</text>
+  <text x="700" y="55" text-anchor="middle" font-size="12.5" fill="#5b6472">Meridian Analytics — this is a cycle, not a line: every incident should make the next one less likely</text>
+
+  <!-- Center hub -->
+  <circle cx="700" cy="360" r="70" fill="#1a2330"/>
+  <text x="700" y="352" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">Cost</text>
+  <text x="700" y="370" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">Governance</text>
+  <text x="700" y="388" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">Loop</text>
+
+  <!-- Top: Anomaly / Bill Spike -->
+  <rect x="565" y="90" width="270" height="110" rx="10" fill="#fdf2f2" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="700" y="114" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7a2018">Anomaly Detected</text>
+  <text x="700" y="132" text-anchor="middle" font-size="9.5" fill="#5a2018">Native cost anomaly detection (GA Dec 2025)</text>
+  <text x="700" y="147" text-anchor="middle" font-size="9.5" fill="#5a2018">or a resource monitor NOTIFY firing,</text>
+  <text x="700" y="162" text-anchor="middle" font-size="9.5" fill="#5a2018">or someone calling with an unexplained bill —</text>
+  <text x="700" y="177" text-anchor="middle" font-size="9.5" fill="#5a2018">the entry point either way</text>
+
+  <!-- Right: Triage -->
+  <rect x="990" y="290" width="270" height="140" rx="10" fill="#eef7fb" stroke="#1a8cc4" stroke-width="1.5"/>
+  <text x="1125" y="316" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0d4a63">Triage</text>
+  <text x="1125" y="333" text-anchor="middle" font-size="9.5" fill="#3a6b80">cost_incident_triage.md</text>
+  <text x="1010" y="354" font-size="9.5" fill="#1a2330">• WAREHOUSE_METERING_HISTORY</text>
+  <text x="1010" y="370" font-size="9.5" fill="#1a2330">• QUERY_HISTORY, blast radius</text>
+  <text x="1010" y="386" font-size="9.5" fill="#1a2330">• cancel query → suspend WH →</text>
+  <text x="1010" y="402" font-size="9.5" fill="#1a2330">  tighten monitor → account-wide</text>
+  <text x="1010" y="418" font-size="9" fill="#5b6472">(least disruptive lever first)</text>
+
+  <!-- Bottom: Root Cause -->
+  <rect x="565" y="520" width="270" height="150" rx="10" fill="#fff4e8" stroke="#d98c2b" stroke-width="1.5"/>
+  <text x="700" y="546" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8a5316">Root Cause</text>
+  <text x="700" y="563" text-anchor="middle" font-size="9.5" fill="#8a5316">root_cause_patterns.md</text>
+  <text x="585" y="584" font-size="9.5" fill="#1a2330">• auto-suspend drift</text>
+  <text x="585" y="600" font-size="9.5" fill="#1a2330">• oversized / multi-cluster misconfig</text>
+  <text x="585" y="616" font-size="9.5" fill="#1a2330">• notify-only monitors</text>
+  <text x="585" y="632" font-size="9.5" fill="#1a2330">• no per-tenant attribution</text>
+  <text x="585" y="654" font-size="9" fill="#5b6472">watching: Adaptive Compute (preview)</text>
+
+  <!-- Left: Remediation & Governance -->
+  <rect x="140" y="290" width="270" height="140" rx="10" fill="#e8f6ec" stroke="#2f8f52" stroke-width="1.5"/>
+  <text x="275" y="316" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d5c34">Remediation &amp; Governance</text>
+  <text x="275" y="333" text-anchor="middle" font-size="9.5" fill="#2f6b45">remediation_and_governance.md</text>
+  <text x="160" y="354" font-size="9.5" fill="#1a2330">• escalating resource monitors</text>
+  <text x="160" y="370" font-size="9.5" fill="#1a2330">• right-sizing methodology</text>
+  <text x="160" y="386" font-size="9.5" fill="#1a2330">• tag-based chargeback</text>
+  <text x="160" y="402" font-size="9.5" fill="#1a2330">• Terraform-enforced monitors</text>
+  <text x="160" y="418" font-size="9" fill="#5b6472">(structurally hard to skip)</text>
+
+  <!-- Cycle arrows -->
+  <path d="M 780,175 C 950,200 1050,240 1090,290" fill="none" stroke="#5b6472" stroke-width="2" marker-end="url(#arrowF)"/>
+  <path d="M 1090,430 C 1000,490 880,520 838,535" fill="none" stroke="#5b6472" stroke-width="2" marker-end="url(#arrowF)"/>
+  <path d="M 620,585 C 450,560 320,500 285,430" fill="none" stroke="#5b6472" stroke-width="2" marker-end="url(#arrowF)"/>
+  <path d="M 285,290 C 340,225 460,185 610,168" fill="none" stroke="#5b6472" stroke-width="2" marker-end="url(#arrowF)"/>
+
+  <text x="960" y="230" font-size="9.5" fill="#5b6472">diagnose</text>
+  <text x="920" y="510" font-size="9.5" fill="#5b6472">explain</text>
+  <text x="440" y="510" font-size="9.5" fill="#5b6472">fix permanently</text>
+  <text x="420" y="220" font-size="9.5" fill="#5b6472">prevent recurrence</text>
+
+  <!-- Escalating resource monitor panel -->
+  <rect x="140" y="700" width="1120" height="0" fill="none"/>
+  <rect x="30" y="695" width="1340" height="0" fill="none"/>
+
+  <!-- Legend / escalation strip -->
+  <rect x="30" y="695" width="1340" height="70" rx="8" fill="#f8f9fa" stroke="#c7ccd1"/>
+  <text x="50" y="716" font-size="10.5" font-weight="600" fill="#3a4250">Resource monitor escalation, enforced in Terraform (remediation_and_governance.md)</text>
+  <rect x="50" y="726" width="230" height="26" fill="#eef7fb" stroke="#1a8cc4"/>
+  <text x="165" y="743" text-anchor="middle" font-size="9.5" fill="#0d4a63">75% → NOTIFY</text>
+  <rect x="290" y="726" width="230" height="26" fill="#eef7fb" stroke="#1a8cc4"/>
+  <text x="405" y="743" text-anchor="middle" font-size="9.5" fill="#0d4a63">90% → NOTIFY</text>
+  <rect x="530" y="726" width="230" height="26" fill="#fff4e8" stroke="#d98c2b"/>
+  <text x="645" y="743" text-anchor="middle" font-size="9.5" fill="#8a5316">100% → SUSPEND</text>
+  <rect x="770" y="726" width="230" height="26" fill="#fdf2f2" stroke="#c0392b"/>
+  <text x="885" y="743" text-anchor="middle" font-size="9.5" fill="#7a2018">110% → SUSPEND_IMMEDIATE</text>
+  <text x="1140" y="743" font-size="9" fill="#5b6472">every prod / Regulated-tier warehouse, by default</text>
+</svg>
