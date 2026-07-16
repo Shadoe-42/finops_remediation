@@ -85,4 +85,4 @@ Native anomaly detection (GA'd December 2025, with Cortex-powered plain-language
 
 - Internal: `cost_incident_triage.md`, `root_cause_patterns.md`, `snowflake_compute_finops.md`, `tagging_standard.md` (sibling repo `data_sec`)
 - [CREATE RESOURCE MONITOR](https://docs.snowflake.com/en/sql-reference/sql/create-resource-monitor)
-- [Snowflake's March 2026 anomaly detection update](https://www.anavsan.com/blog/snowflake-native-anomaly-detection-vs-apex-what-happens-after-a-cost-spike-is-found)
+- [Introduction to cost anomalies — Snowflake Documentation](https://docs.snowflake.com/en/user-guide/cost-anomalies)
